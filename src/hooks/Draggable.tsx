@@ -8,7 +8,7 @@ export function Draggable(props: any) {
   })
   const style = transform
     ? {
-        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+        transform: CSS.Translate.toString(transform),
       }
     : undefined
 
