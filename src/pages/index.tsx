@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import { DndContext } from '@dnd-kit/core'
+import { DndContext, TouchSensor, useSensor, useSensors } from '@dnd-kit/core'
 import { Draggable } from '@/hooks/Draggable'
 import { Droppable } from '@/hooks/Droppable'
 import { useState } from 'react'
@@ -16,6 +16,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [parent, setParent] = useState(null)
+  const touchSensor = useSensor(TouchSensor)
+
+  const sensors = useSensors(touchSensor)
 
   const draggable = (
     <Draggable style={styles.draggable}>
@@ -39,7 +42,7 @@ export default function Home() {
         <div className={styles.description}>
           <h1>Digiswim Station 1</h1>
         </div>
-        <DndContext onDragEnd={handleDragEnd}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           {!parent ? draggable : null}
           <Droppable>
             {parent === 'droppable' ? (
