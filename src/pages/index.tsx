@@ -15,16 +15,16 @@ import Stein from '../images/stein.png'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [isDropped, setIsDropped] = useState(false)
-  const draggableMarkup = (
-    <Draggable>
+  const [parent, setParent] = useState(null)
+
+  const draggable = (
+    <Draggable style={styles.draggable}>
       <Image src={Stein} alt="Ein Stein" />
     </Draggable>
   )
-  function handleDragEnd(event: any) {
-    if (event.over && event.over.id === 'droppable') {
-      setIsDropped(true)
-    }
+
+  function handleDragEnd({ over }: any) {
+    setParent(over ? over.id : null)
   }
 
   return (
@@ -40,9 +40,9 @@ export default function Home() {
           <h1>Digiswim Station 1</h1>
         </div>
         <DndContext onDragEnd={handleDragEnd}>
-          {!isDropped ? draggableMarkup : null}
+          {!parent ? draggable : null}
           <Droppable>
-            {isDropped ? (
+            {parent === 'droppable' ? (
               <Image src={BecherVoll} alt="Voller Becher" />
             ) : (
               <Image src={Becher} alt="Leerer Becher" />

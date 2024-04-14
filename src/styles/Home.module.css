@@ -7,6 +7,11 @@
   min-height: 100vh;
 }
 
+.draggable {
+  touch-action: manipulation;
+  border: red 2px solid;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(360deg);
