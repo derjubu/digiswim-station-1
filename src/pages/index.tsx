@@ -3,9 +3,30 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
+import { DndContext } from '@dnd-kit/core'
+import { Draggable } from '@/hooks/Draggable'
+import { Droppable } from '@/hooks/Droppable'
+import { useState } from 'react'
+
+import Becher from '../images/becher.png'
+import BecherVoll from '../images/becher-voll.png'
+import Stein from '../images/stein.png'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [isDropped, setIsDropped] = useState(false)
+  const draggableMarkup = (
+    <Draggable>
+      <Image src={Stein} alt="Ein Stein" />
+    </Draggable>
+  )
+  function handleDragEnd(event: any) {
+    if (event.over && event.over.id === 'droppable') {
+      setIsDropped(true)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -18,6 +39,16 @@ export default function Home() {
         <div className={styles.description}>
           <h1>Digiswim Station 1</h1>
         </div>
+        <DndContext onDragEnd={handleDragEnd}>
+          {!isDropped ? draggableMarkup : null}
+          <Droppable>
+            {isDropped ? (
+              <Image src={BecherVoll} alt="Voller Becher" />
+            ) : (
+              <Image src={Becher} alt="Leerer Becher" />
+            )}
+          </Droppable>
+        </DndContext>
       </main>
     </>
   )
