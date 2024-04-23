@@ -15,6 +15,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [parent, setParent] = useState(null)
   const [waterValue, setWaterValue] = useState('0')
+  const bubblePosition =
+    Number(waterValue) * 10 * 4 - Number(waterValue) * 2 - 200
   const touchSensor = useSensor(TouchSensor)
 
   const sensors = useSensors(touchSensor)
@@ -59,7 +61,14 @@ export default function Home() {
                 onChange={(e) => setWaterValue(e.target.value)}
                 className={styles.slider}
               />
-              <p>{waterValue}</p>
+              <div className={styles.valueContainer}>
+                <span
+                  className={styles.value}
+                  style={{ bottom: bubblePosition }}
+                >
+                  {waterValue}
+                </span>
+              </div>
             </div>
             <Droppable>
               {parent === 'droppable' ? (
