@@ -8,14 +8,13 @@ import { Draggable } from '@/hooks/Draggable'
 import { Droppable } from '@/hooks/Droppable'
 import { useState } from 'react'
 
-import Becher from '../images/becher.png'
-import BecherVoll from '../images/becher-voll.png'
 import Stein from '../images/stein.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [parent, setParent] = useState(null)
+  const [waterValue, setWaterValue] = useState('0')
   const touchSensor = useSensor(TouchSensor)
 
   const sensors = useSensors(touchSensor)
@@ -56,8 +55,11 @@ export default function Home() {
                 step="1"
                 id="height"
                 name="height"
+                value={waterValue}
+                onChange={(e) => setWaterValue(e.target.value)}
                 className={styles.slider}
               />
+              <p>{waterValue}</p>
             </div>
             <Droppable>
               {parent === 'droppable' ? (
