@@ -47,7 +47,7 @@ export default function Home() {
             {!parent ? draggable : null}
           </div>
           <div className={styles.experimentContainer}>
-            <div>
+            <div className={styles.sliderContainer}>
               <input
                 type="range"
                 min="0"
