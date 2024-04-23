@@ -1,15 +1,46 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 60px;
   align-items: center;
-  padding: 6rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
 .draggable {
   touch-action: manipulation;
-  border: red 2px solid;
+}
+
+.draggableContainer {
+  height: 96px;
+}
+
+.experimentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.slider {
+  width: 400px;
+  height: 100px;
+  rotate: -90deg;
+}
+
+.glass {
+  height: 400px;
+  width: 175px;
+  border: 2px solid black;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.glassFull {
+  background: linear-gradient(#ffffff 20%, blue 20%);
 }
 
 @keyframes rotate {

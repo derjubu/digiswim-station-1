@@ -43,14 +43,36 @@ export default function Home() {
           <h1>Digiswim Station 1</h1>
         </div>
         <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
-          {!parent ? draggable : null}
-          <Droppable>
-            {parent === 'droppable' ? (
-              <Image src={BecherVoll} alt="Voller Becher" />
-            ) : (
-              <Image src={Becher} alt="Leerer Becher" />
-            )}
-          </Droppable>
+          <div className={styles.draggableContainer}>
+            {!parent ? draggable : null}
+          </div>
+          <div className={styles.experimentContainer}>
+            <div>
+              <input
+                type="range"
+                min="0"
+                max="10"
+                defaultValue="0"
+                step="1"
+                id="height"
+                name="height"
+                className={styles.slider}
+              />
+            </div>
+            <Droppable>
+              {parent === 'droppable' ? (
+                <div className={`${styles.glass} ${styles.glassFull}`}>
+                  <Image
+                    className={styles.objectInWater}
+                    src={Stein}
+                    alt="Ein Stein"
+                  />
+                </div>
+              ) : (
+                <div className={styles.glass}></div>
+              )}
+            </Droppable>
+          </div>
         </DndContext>
       </main>
     </>
