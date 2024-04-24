@@ -10,7 +10,6 @@
 
 .draggable {
   touch-action: manipulation;
-  border: 2px solid red;
 }
 
 .draggableContainer {
