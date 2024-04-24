@@ -9,6 +9,8 @@ import { Droppable } from '@/hooks/Droppable'
 import { useState } from 'react'
 
 import Stein from '../images/stein.png'
+import Fichte from '../images/fichte.png'
+import Tropen from '../images/tropen.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,7 +47,9 @@ export default function Home() {
         </div>
         <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           <div className={styles.draggableContainer}>
-            {!parent ? draggable : null}
+            {!parent ? draggable : <div className={styles.emptyBlock}></div>}
+            <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
+            <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
           </div>
           <div className={styles.experimentContainer}>
             <div className={styles.sliderContainer}>

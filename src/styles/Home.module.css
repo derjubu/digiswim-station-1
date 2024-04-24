@@ -10,10 +10,19 @@
 
 .draggable {
   touch-action: manipulation;
+  border: 2px solid red;
 }
 
 .draggableContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
   height: 96px;
+
+  .emptyBlock {
+    height: 96px;
+    width: 96px;
+  }
 }
 
 .experimentContainer {

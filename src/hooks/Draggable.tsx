@@ -6,8 +6,11 @@ export function Draggable(props: any) {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: 'draggable',
   })
+
   const style = {
     transform: CSS.Translate.toString(transform),
+    border: 'none',
+    background: 'transparent',
   }
 
   return (
