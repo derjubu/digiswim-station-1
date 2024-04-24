@@ -22,7 +22,7 @@ export default function Home() {
   const [parent, setParent] = useState(null)
   const [waterValue, setWaterValue] = useState('6')
   const bubblePosition =
-    Number(waterValue) * 10 * 4 - Number(waterValue) * 2 - 200
+    Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
   const touchSensor = useSensor(TouchSensor)
 
   const sensors = useSensors(touchSensor)
