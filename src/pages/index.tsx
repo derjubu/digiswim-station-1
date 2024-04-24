@@ -21,7 +21,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [parent, setParent] = useState(null)
-  const [waterValue, setWaterValue] = useState('0')
+  const [waterValue, setWaterValue] = useState('6')
   const bubblePosition =
     Number(waterValue) * 10 * 4 - Number(waterValue) * 2 - 200
   const touchSensor = useSensor(TouchSensor)

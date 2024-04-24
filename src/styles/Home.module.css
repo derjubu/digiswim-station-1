@@ -82,6 +82,7 @@
   justify-content: center;
   align-items: flex-end;
   transform: translateX(-60px);
+  background: linear-gradient(#ffffff 40%, blue 40%);
 }
 
 .glassFull {
