@@ -1,0 +1,11 @@
+.imageContainer {
+  position: relative;
+  aspect-ratio: 278/359;
+  margin-inline: auto;
+  width: 640px;
+}
+
+.centered {
+  margin-top: 20px;
+  text-align: center;
+}
