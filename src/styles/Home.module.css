@@ -1,11 +1,27 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 60px;
+  justify-content: flex-start;
+  gap: 32px;
   align-items: center;
-  padding: 1rem;
   min-height: 100vh;
+}
+
+.headline {
+  padding-top: 20px;
+}
+
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tableData {
+  border: 1px solid black;
+  text-align: center;
+  padding: 6px;
+  font-size: 20px;
+  border-collapse: collapse;
 }
 
 .draggable {
@@ -28,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 400px;
+  height: 300px;
 }
 .sliderContainer {
   display: flex;
@@ -53,12 +69,12 @@
 }
 
 .slider {
-  width: 400px;
+  width: 300px;
   transform: rotate(-90deg);
 }
 
 .glass {
-  height: 400px;
+  height: 300px;
   width: 150px;
   border: 2px solid black;
   border-top: none;
