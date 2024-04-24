@@ -24,7 +24,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const router = useRouter()
   function nextPage() {
-    router.push('/step2')
+    router.push('/result')
   }
 
   const [parent, setParent] = useState(null)
