@@ -1,11 +1,28 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 60px;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.headline {
+  padding-top: 20px;
+}
+
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tableData {
+  border: 1px solid black;
+  text-align: center;
+  padding: 6px;
+  font-size: 20px;
+  border-collapse: collapse;
 }
 
 .draggable {
@@ -13,15 +30,25 @@
 }
 
 .draggableContainer {
-  height: 96px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  height: 89px;
+
+  .emptyBlock {
+    height: 89px;
+    width: 96px;
+  }
 }
 
 .experimentContainer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 400px;
+  height: 300px;
+  padding-right: 100px;
 }
+
 .sliderContainer {
   display: flex;
   justify-content: space-evenly;
@@ -45,23 +72,20 @@
 }
 
 .slider {
-  width: 400px;
+  width: 300px;
   transform: rotate(-90deg);
 }
 
 .glass {
-  height: 400px;
+  height: 300px;
   width: 150px;
   border: 2px solid black;
   border-top: none;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  transform: translateX(-60px);
-}
 
-.glassFull {
-  background: linear-gradient(#ffffff 20%, blue 20%);
+  background: linear-gradient(#ffffff 40%, blue 40%);
 }
 
 @keyframes rotate {

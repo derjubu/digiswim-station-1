@@ -1,0 +1,12 @@
+.glassFull {
+  background: linear-gradient(#ffffff 20%, blue 20%);
+}
+
+.glassFullLower {
+  background: linear-gradient(#ffffff 30%, blue 30%);
+}
+
+.blockFloat {
+  align-self: center;
+  margin-bottom: 80px;
+}

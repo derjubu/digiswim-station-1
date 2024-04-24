@@ -1,0 +1,7 @@
+.container {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
