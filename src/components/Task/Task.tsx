@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react';
-import classes from './Task.module.css';
+import type { ReactNode } from 'react'
+import classes from './Task.module.css'
 
 type ButtonProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 export default function Task({ children }: ButtonProps): JSX.Element {
-  return <li className={classes.description}>{children}</li>;
+  return <p className={classes.description}>{children}</p>
 }

@@ -8,7 +8,6 @@ import { Draggable } from '@/hooks/Draggable'
 import { Droppable } from '@/hooks/Droppable'
 import { useState } from 'react'
 
-import Tasklist from '@/components/Tasklist/Tasklist'
 import Task from '@/components/Task/Task'
 import Pikto from '@/components/Pikto/Pikto'
 
@@ -50,13 +49,11 @@ export default function Home() {
         <div className={styles.headline}>
           <h1>Digiswim Station 1</h1>
         </div>
-        <Tasklist>
-          <Task>
-            <Pikto image={Finger} />
-            Schiebe den den Stein ins Wasser. Danach schiebe Regler neben dem
-            Glas auf die Höhe vom Wasser.
-          </Task>
-        </Tasklist>
+        <Task>
+          <Pikto image={Finger} />
+          Ziehe den Würfel aus Stein in das Wasser. Dann schiebe den Regler
+          neben dem Glas dahin, bis wo das Wasser steigt.
+        </Task>
         <table className={styles.table}>
           <tbody>
             <tr>
