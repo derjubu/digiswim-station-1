@@ -109,11 +109,7 @@ export default function Home() {
             <Droppable id="droppable">
               {parent === 'droppable' ? (
                 <div className={`${styles.glass} ${styles.glassFull}`}>
-                  <Image
-                    className={styles.objectInWater}
-                    src={Stein}
-                    alt="Ein Stein"
-                  />
+                  <Image src={Stein} alt="Ein Stein" />
                 </div>
               ) : (
                 <div className={styles.glass}></div>
