@@ -28,10 +28,8 @@ export default function Alias(): JSX.Element {
         Bearbeite die folgenden Aufgaben und ziehe die verschiedenen Elemente in
         der Gefäß!
       </Task>
-      <Task>
-        <Pikto image={Lupe} />
-        Beobachte, was passiert, und notiere am Ende dein Ergebnis.
-      </Task>
+      <Pikto image={Lupe} />
+      <Task>Beobachte, was passiert, und notiere am Ende dein Ergebnis.</Task>
       <Image src={Boot} alt="Ein Boot" className={styles.image} />
       <Button onClick={nextPage}>Los geht&apos;s</Button>
     </div>
