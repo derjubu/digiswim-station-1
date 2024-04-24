@@ -12,11 +12,10 @@ export default function Alias(): JSX.Element {
   function submitAlias(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (!alias || !age || !grade || !gender) {
-      console.log({ alias }, { age }, { grade }, { gender })
       window.alert('Bitte fülle alle Felder aus')
     } else {
       window.localStorage.setItem('alias', alias)
-      router.push('/overview')
+      router.push('/intro')
     }
   }
 
