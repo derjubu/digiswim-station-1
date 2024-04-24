@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import classes from '@/styles/steps.module.css'
 
 import { DndContext, TouchSensor, useSensor, useSensors } from '@dnd-kit/core'
 import { Draggable } from '@/hooks/Draggable'
@@ -108,7 +109,7 @@ export default function Home() {
             </div>
             <Droppable id="droppable">
               {parent === 'droppable' ? (
-                <div className={`${styles.glass} ${styles.glassFull}`}>
+                <div className={`${styles.glass} ${classes.glassFull}`}>
                   <Image src={Stein} alt="Ein Stein" />
                 </div>
               ) : (
