@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.headline}>
-          <h1>Digiswim Aufage 1</h1>
+          <h1>Digiswim Station 1</h1>
         </div>
         <Task>
           <Pikto image={Finger} />
