@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Button from '../components/Button/Button'
-import styles from '@/styles/Home.module.css'
+import classes from '@/styles/Home.module.css'
 import Form from '../components/Form/Form'
 import Label from '../components/Label/Label'
-import classes from '../styles/alias.module.css'
+import styles from '../styles/alias.module.css'
 
 export default function Alias(): JSX.Element {
   const router = useRouter()
@@ -12,8 +12,10 @@ export default function Alias(): JSX.Element {
   function submitAlias(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (!alias || !age || !grade || !gender) {
+      console.log({ alias }, { age }, { grade }, { gender })
       window.alert('Bitte fülle alle Felder aus')
     } else {
+      window.localStorage.setItem('alias', alias)
       router.push('/overview')
     }
   }
@@ -24,8 +26,9 @@ export default function Alias(): JSX.Element {
   const [gender, setGender] = useState('')
 
   return (
-    <div className={styles.app}>
+    <div className={classes.main}>
       <Form onSubmit={submitAlias}>
+        <h1>Erzähle uns etwas über dich</h1>
         Wie heißt du?
         <Label htmlFor="alias">
           <input
@@ -47,7 +50,6 @@ export default function Alias(): JSX.Element {
         In welche Klasse gehst du?
         <Label htmlFor="grade">
           <input
-            className={classes.transform}
             type="radio"
             id="3grade"
             name="grade"
@@ -57,7 +59,7 @@ export default function Alias(): JSX.Element {
               if (target) setGrade(target.value as string)
             }}
           />
-          <label htmlFor="3grade" className={classes.radioLabel}>
+          <label htmlFor="3grade" className={styles.radioLabel}>
             3. Klasse
           </label>
           <input
@@ -70,7 +72,7 @@ export default function Alias(): JSX.Element {
               if (target) setGrade(target.value as string)
             }}
           />
-          <label htmlFor="4grade" className={classes.radioLabel}>
+          <label htmlFor="4grade" className={styles.radioLabel}>
             4. Klasse
           </label>
         </Label>
@@ -83,10 +85,9 @@ export default function Alias(): JSX.Element {
             value="male"
             onClick={(event) => {
               const target = event.target as HTMLButtonElement
-              if (target) setGender('AO02')
             }}
           />
-          <label htmlFor="male" className={classes.radioLabel}>
+          <label htmlFor="male" className={styles.radioLabel}>
             Junge
           </label>
           <input
@@ -96,24 +97,24 @@ export default function Alias(): JSX.Element {
             value="female"
             onClick={(event) => {
               const target = event.target as HTMLButtonElement
-              if (target) setGender('AO01')
+              if (target) setGender('male')
             }}
           />
-          <label htmlFor="female" className={classes.radioLabel}>
+          <label htmlFor="female" className={styles.radioLabel}>
             Mädchen
           </label>
-          <div className={classes.answerBlock}>
+          <div className={styles.answerBlock}>
             <input
               type="radio"
               id="none"
               name="gender"
-              value="female"
+              value="none"
               onClick={(event) => {
                 const target = event.target as HTMLButtonElement
-                if (target) setGender('AO03')
+                if (target) setGender('none')
               }}
             />
-            <label htmlFor="none" className={classes.radioLabel}>
+            <label htmlFor="none" className={styles.radioLabel}>
               Möchte ich nicht sagen
             </label>
           </div>
