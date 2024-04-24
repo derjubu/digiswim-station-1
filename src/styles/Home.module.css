@@ -88,10 +88,6 @@
   background: linear-gradient(#ffffff 40%, blue 40%);
 }
 
-.glassFull {
-  background: linear-gradient(#ffffff 20%, blue 20%);
-}
-
 @keyframes rotate {
   from {
     transform: rotate(360deg);
