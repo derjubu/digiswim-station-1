@@ -92,7 +92,7 @@ export default function Home() {
         {waterValue === '6' ? (
           <Button onClick={nextPage}>Weiter</Button>
         ) : (
-          <Button>Weiter</Button>
+          <Button isActive={false}>Weiter</Button>
         )}
       </main>
     </>

@@ -1,6 +1,6 @@
 .button {
-  color: #000;
-  background: linear-gradient(180deg, #ffbb3b, #ffa90a);
+  color: #525252;
+  background-color: lightgray;
   font-size: 1.25em;
   font-weight: bold;
   padding: 0.8em 2em;
@@ -9,4 +9,9 @@
   text-transform: uppercase;
   cursor: pointer;
   width: fit-content;
+}
+
+.buttonActive {
+  color: #000;
+  background: linear-gradient(180deg, #ffbb3b, #ffa90a);
 }
