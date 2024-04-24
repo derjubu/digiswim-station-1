@@ -8,12 +8,12 @@ export default function Alias(): JSX.Element {
   const router = useRouter()
 
   function nextPage() {
-    router.push('/intro')
+    router.push('/step1')
   }
 
   return (
     <div className={classes.main}>
-      <Button>Los geht&apos;s</Button>
+      <Button onClick={nextPage}>Los geht&apos;s</Button>
     </div>
   )
 }
