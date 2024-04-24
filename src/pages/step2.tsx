@@ -15,10 +15,17 @@ import Stein from '../images/stein.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
+import Button from '@/components/Button/Button'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const router = useRouter()
+  function nextPage() {
+    router.push('/step2')
+  }
+
   const [parent, setParent] = useState(null)
   const [waterValue, setWaterValue] = useState('6')
   const bubblePosition =
@@ -63,7 +70,7 @@ export default function Home() {
               <td className={styles.tableData}>Tropenholz</td>
             </tr>
             <tr>
-              <td className={styles.tableData}>0</td>
+              <td className={styles.tableData}>6</td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
@@ -113,6 +120,11 @@ export default function Home() {
             </Droppable>
           </div>
         </DndContext>
+        {waterValue === '8' && parent === 'droppable' ? (
+          <Button onClick={nextPage}>Weiter</Button>
+        ) : (
+          <Button isActive={false}>Weiter</Button>
+        )}
       </main>
     </>
   )

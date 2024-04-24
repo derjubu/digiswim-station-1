@@ -46,7 +46,9 @@
   align-items: center;
   justify-content: flex-end;
   height: 300px;
+  padding-right: 100px;
 }
+
 .sliderContainer {
   display: flex;
   justify-content: space-evenly;
@@ -82,7 +84,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  transform: translateX(-60px);
+
   background: linear-gradient(#ffffff 40%, blue 40%);
 }
 
