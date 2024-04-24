@@ -1,4 +1,5 @@
 import styles from '../styles/intro.module.css'
+import classes from '../styles/Home.module.css'
 import Image from 'next/image'
 import Title from '../images/hero.jpg'
 import Button from '../components/Button/Button'
@@ -14,7 +15,8 @@ export default function Intro(): JSX.Element {
   }
 
   return (
-    <>
+    <div className={classes.main}>
+      <h1>Digitales Experiemt zum Thema</h1>
       <div className={styles.imageContainer}>
         <Image
           className={styles.titleImage}
@@ -28,6 +30,6 @@ export default function Intro(): JSX.Element {
           <Button onClick={onCLick}>Lass uns loslegen</Button>
         </Link>
       </div>
-    </>
+    </div>
   )
 }

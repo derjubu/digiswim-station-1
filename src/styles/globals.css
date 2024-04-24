@@ -17,12 +17,14 @@
   body {
     max-width: 80vw;
     margin-inline: auto;
+    margin-block: 20px;
     overflow-x: hidden;
   }
 
   body {
     color: black;
     background: white;
+    text-align: center;
   }
 
   a {
