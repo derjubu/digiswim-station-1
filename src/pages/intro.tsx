@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
@@ -13,7 +13,9 @@ import Boot from '../images/boot_skaliert.png'
 import Task from '@/components/Task/Task'
 
 export default function Alias(): JSX.Element {
-  const childName = window.localStorage.getItem('alias')
+  const [aliasName, setAliasName] = useState('')
+
+  useEffect(() => setAliasName(window!.localStorage!.getItem('alias')!))
 
   const router = useRouter()
 
@@ -23,7 +25,7 @@ export default function Alias(): JSX.Element {
 
   return (
     <div className={classes.main}>
-      <h1>Hallo {childName}, lass uns starten!</h1>
+      <h1>Hallo {aliasName}, lass uns starten!</h1>
       <Task>
         Bearbeite die folgenden Aufgaben und ziehe die verschiedenen Elemente in
         der Gefäß!
