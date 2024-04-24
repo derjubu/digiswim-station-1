@@ -1,4 +1,4 @@
-import styles from '../styles/intro.module.css'
+import styles from '../styles/index.module.css'
 import classes from '../styles/Home.module.css'
 import Image from 'next/image'
 import Title from '../images/hero.jpg'
