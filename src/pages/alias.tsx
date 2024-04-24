@@ -84,6 +84,7 @@ export default function Alias(): JSX.Element {
             value="male"
             onClick={(event) => {
               const target = event.target as HTMLButtonElement
+              if (target) setGender('male')
             }}
           />
           <label htmlFor="male" className={styles.radioLabel}>
@@ -96,7 +97,7 @@ export default function Alias(): JSX.Element {
             value="female"
             onClick={(event) => {
               const target = event.target as HTMLButtonElement
-              if (target) setGender('male')
+              if (target) setGender('female')
             }}
           />
           <label htmlFor="female" className={styles.radioLabel}>
