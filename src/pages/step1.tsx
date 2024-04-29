@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.headline}>
-          <h1>Digiswim Station 1</h1>
+          <h1>Digiswim Aufgabe 1</h1>
         </div>
         <Task>
           <Pikto image={Finger} />
@@ -49,15 +49,11 @@ export default function Home() {
         <table className={styles.table}>
           <tbody>
             <tr>
-              <td className={styles.tableData}>Leer</td>
-              <td className={styles.tableData}>Stein</td>
-              <td className={styles.tableData}>Fichte</td>
-              <td className={styles.tableData}>Tropenholz</td>
+              <td className={styles.tableData}>Material</td>
+              <td className={styles.tableData}>Ohne Würfel</td>
             </tr>
             <tr>
-              <td className={styles.tableData}>?</td>
-              <td className={styles.tableData}>?</td>
-              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>Wasserhöhe</td>
               <td className={styles.tableData}>?</td>
             </tr>
           </tbody>
