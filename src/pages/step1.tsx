@@ -3,9 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import { DndContext, TouchSensor, useSensor, useSensors } from '@dnd-kit/core'
-import { Draggable } from '@/hooks/Draggable'
-import { Droppable } from '@/hooks/Droppable'
 import { useState } from 'react'
 
 import Task from '@/components/Task/Task'
@@ -17,6 +14,7 @@ import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
 import Button from '@/components/Button/Button'
 import { useRouter } from 'next/router'
+import clsx from 'clsx'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +25,7 @@ export default function Home() {
   }
 
   const [waterValue, setWaterValue] = useState('0')
+  const correctWaterValue = waterValue === '6'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
 
@@ -54,16 +53,13 @@ export default function Home() {
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
-              <td className={styles.tableData}>?</td>
+              <td className={clsx(styles.tableData, styles.tableDataActive)}>
+                {correctWaterValue ? waterValue : '?'}
+              </td>
             </tr>
           </tbody>
         </table>
 
-        <div className={styles.draggableContainer}>
-          <Image src={Stein} alt="Ein Blok aus Stein" />
-          <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
-          <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
-        </div>
         <div className={styles.experimentContainer}>
           <div className={styles.sliderContainer}>
             <input
@@ -85,7 +81,7 @@ export default function Home() {
           </div>
           <div className={styles.glass}></div>
         </div>
-        {waterValue === '6' ? (
+        {correctWaterValue ? (
           <Button onClick={nextPage}>Weiter</Button>
         ) : (
           <Button isActive={false}>Weiter</Button>
