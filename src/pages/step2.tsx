@@ -82,11 +82,6 @@ export default function Home() {
           </tbody>
         </table>
         <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
-          <div className={styles.draggableContainer}>
-            {!parent ? draggable : <div className={styles.emptyBlock}></div>}
-            <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
-            <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
-          </div>
           <div className={styles.experimentContainer}>
             <div className={styles.sliderContainer}>
               <input
@@ -118,6 +113,11 @@ export default function Home() {
                 <div className={styles.glass}></div>
               )}
             </Droppable>
+            <div className={styles.draggableContainer}>
+              {!parent ? draggable : <div className={styles.emptyBlock}></div>}
+              <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
+              <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
+            </div>
           </div>
         </DndContext>
         {correctWaterValue && parent === 'droppable' ? (

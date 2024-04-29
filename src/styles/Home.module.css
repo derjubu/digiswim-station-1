@@ -44,9 +44,9 @@
 
 .draggableContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 12px;
-  height: 89px;
+  padding-left: 32px;
 
   .emptyBlock {
     height: 89px;
@@ -97,6 +97,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  transform: translatex(-20px);
 
   background: linear-gradient(#ffffff 40%, blue 40%);
 }
