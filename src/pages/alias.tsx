@@ -77,7 +77,7 @@ export default function Alias(): JSX.Element {
             4. Klasse
           </label>
         </Label>
-        Bist du ein Mädchen oder ein Junge
+        Bist du ein Mädchen oder ein Junge?
         <Label htmlFor="Gender">
           <input
             type="radio"
