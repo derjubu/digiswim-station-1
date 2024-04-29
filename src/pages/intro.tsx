@@ -28,7 +28,7 @@ export default function Alias(): JSX.Element {
       <h1>Hallo {aliasName}, lass uns starten!</h1>
       <Task>
         Bearbeite die folgenden Aufgaben und ziehe die verschiedenen Elemente in
-        der Gefäß!
+        das Gefäß!
       </Task>
 
       <Task>
