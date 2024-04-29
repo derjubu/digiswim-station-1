@@ -12,6 +12,10 @@
   padding-top: 20px;
 }
 
+.input {
+  height: 44px;
+}
+
 .table {
   border: 1px solid black;
   border-collapse: collapse;
