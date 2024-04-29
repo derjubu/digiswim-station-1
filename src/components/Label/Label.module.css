@@ -27,7 +27,6 @@
 }
 
 .label > input[type='number'] {
-  font-size: 2em;
   width: 20%;
   text-align: right;
 }
