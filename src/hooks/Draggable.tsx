@@ -11,6 +11,7 @@ export function Draggable(props: any) {
     transform: CSS.Translate.toString(transform),
     border: 'none',
     background: 'transparent',
+    height: '89px',
   }
 
   return (
