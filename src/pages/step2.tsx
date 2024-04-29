@@ -66,12 +66,14 @@ export default function Home() {
         <table className={styles.table}>
           <tbody>
             <tr>
-              <td className={styles.tableData}>Leer</td>
+              <td className={styles.tableData}>Material</td>
+              <td className={styles.tableData}>Ohne Würfel</td>
               <td className={styles.tableData}>Stein</td>
               <td className={styles.tableData}>Fichte</td>
               <td className={styles.tableData}>Tropenholz</td>
             </tr>
             <tr>
+              <td className={styles.tableData}>Wasserhöhe</td>
               <td className={styles.tableData}>6</td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
