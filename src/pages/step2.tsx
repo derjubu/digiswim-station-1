@@ -69,8 +69,13 @@ export default function Home() {
           <tbody>
             <tr>
               <td className={styles.tableData}>Material</td>
-              <td className={styles.tableData}>Ohne Würfel</td>
-              <td className={styles.tableData}>Stein</td>
+              <td className={styles.tableData}>
+                <div className={styles.glasTable}></div>
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Stein} alt="Ein Stein" />
+              </td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
