@@ -81,7 +81,7 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
-        <DndContext onDragOver={handleDragEnd} sensors={sensors}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           <div className={styles.draggableContainer}>
             {!parent ? draggable : <div className={styles.emptyBlock}></div>}
             <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
