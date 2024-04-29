@@ -18,6 +18,7 @@ import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
 import Button from '@/components/Button/Button'
 import { useRouter } from 'next/router'
+import clsx from 'clsx'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,6 +30,7 @@ export default function Home() {
 
   const [parent, setParent] = useState(null)
   const [waterValue, setWaterValue] = useState('6')
+  const correctWaterValue = waterValue === '8'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
   const touchSensor = useSensor(TouchSensor)
@@ -69,15 +71,13 @@ export default function Home() {
               <td className={styles.tableData}>Material</td>
               <td className={styles.tableData}>Ohne Würfel</td>
               <td className={styles.tableData}>Stein</td>
-              <td className={styles.tableData}>Fichte</td>
-              <td className={styles.tableData}>Tropenholz</td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
               <td className={styles.tableData}>6</td>
-              <td className={styles.tableData}>?</td>
-              <td className={styles.tableData}>?</td>
-              <td className={styles.tableData}>?</td>
+              <td className={clsx(styles.tableData, styles.tableDataActive)}>
+                {correctWaterValue ? waterValue : '?'}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -120,7 +120,7 @@ export default function Home() {
             </Droppable>
           </div>
         </DndContext>
-        {waterValue === '8' && parent === 'droppable' ? (
+        {correctWaterValue && parent === 'droppable' ? (
           <Button onClick={nextPage}>Weiter</Button>
         ) : (
           <Button isActive={false}>Weiter</Button>
