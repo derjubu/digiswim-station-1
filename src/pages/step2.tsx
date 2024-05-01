@@ -35,6 +35,7 @@ export default function Home() {
   }
 
   const [parent, setParent] = useState(null)
+  const [swimsValue, setSwimsValue] = useState('none')
   const [waterValue, setWaterValue] = useState('6')
   const correctWaterValue = waterValue === '8'
   const bubblePosition =
@@ -119,8 +120,13 @@ export default function Home() {
               </td>
               <td className={styles.tableData}>-</td>
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
-                <select id="swims" name="swims">
-                  <option value="swims">---</option>
+                <select
+                  id="swims"
+                  name="swims"
+                  value={swimsValue}
+                  onChange={(e) => setSwimsValue(e.target.value)}
+                >
+                  <option value="none">---</option>
                   <option value="swims">Schwimmt</option>
                   <option value="sinks">Sinkt</option>
                 </select>
@@ -171,7 +177,9 @@ export default function Home() {
         </DndContext>
         <div className={styles.buttonContainer}>
           <Button onClick={previousPage}>Zurück</Button>
-          {correctWaterValue && parent === 'droppable' ? (
+          {correctWaterValue &&
+          parent === 'droppable' &&
+          swimsValue === 'sinks' ? (
             <Button onClick={nextPage}>Weiter</Button>
           ) : (
             <Button isActive={false}>Weiter</Button>
