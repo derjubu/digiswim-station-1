@@ -68,8 +68,9 @@ export default function Home() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe den Würfel aus Fichtenholz in das Wasser. Dann schiebe den
-          Regler neben dem Glas dahin, bis wo das Wasser steigt.
+          Ziehe jetzt den Würfel aus Fichtenholz in das Glas mit Wasser. Schiebe
+          den Regler neben dem Glas dahin, wo das Wasser steht. Welche Zahl
+          siehst du in der Tabelle?
         </Task>
         <table className={styles.table}>
           <tbody>
@@ -86,6 +87,10 @@ export default function Home() {
                 {' '}
                 <Image src={Fichte} alt="Ein Block aus Fichte" />
               </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              </td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
@@ -94,6 +99,14 @@ export default function Home() {
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 {correctWaterValue ? waterValue : '?'}
               </td>
+              <td className={styles.tableData}>?</td>
+            </tr>
+            <tr>
+              <td className={styles.tableData}>Gewicht</td>
+              <td className={styles.tableData}>-</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>142 g</td>
+              <td className={styles.tableData}>55 g</td>
             </tr>
             <tr>
               <td className={styles.tableData}>
@@ -156,14 +169,16 @@ export default function Home() {
             </div>
           </div>
         </DndContext>
-        <Button onClick={previousPage}>Zurück</Button>
-        {correctWaterValue &&
-        parent === 'droppable' &&
-        swimsValue === 'sinks' ? (
-          <Button onClick={nextPage}>Weiter</Button>
-        ) : (
-          <Button isActive={false}>Weiter</Button>
-        )}
+        <div className={styles.buttonContainer}>
+          <Button onClick={previousPage}>Zurück</Button>
+          {correctWaterValue &&
+          parent === 'droppable' &&
+          swimsValue === 'sinks' ? (
+            <Button onClick={nextPage}>Weiter</Button>
+          ) : (
+            <Button isActive={false}>Weiter</Button>
+          )}
+        </div>
       </main>
     </>
   )

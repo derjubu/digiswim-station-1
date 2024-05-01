@@ -63,6 +63,22 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
           </tr>
+          <tr>
+            <td className={styles.tableData}>Gewicht</td>
+            <td className={styles.tableData}>-</td>
+            <td className={styles.tableData}>28 g</td>
+            <td className={styles.tableData}>142 g</td>
+            <td className={styles.tableData}>55 g</td>
+          </tr>
+          <tr>
+            <td className={styles.tableData}>
+              <label htmlFor="swims">Schwimmt oder sinkt</label>
+            </td>
+            <td className={styles.tableData}>-</td>
+            <td className={styles.tableData}>Sinkt</td>
+            <td className={styles.tableData}>Sinkt</td>
+            <td className={styles.tableData}>Schwimmt</td>
+          </tr>
         </tbody>
       </table>
       <Label htmlFor="task1">
@@ -87,12 +103,14 @@ export default function Result(): JSX.Element {
           onChange={(event) => setTask2(event.target.value)}
         />
       </Label>
-      <Button onClick={previousPage}>Zurück</Button>
-      {task1 !== '' && task2 !== '' ? (
-        <Button onClick={nextPage}>Beenden</Button>
-      ) : (
-        <Button isActive={false}>Beenden</Button>
-      )}
+      <div className={styles.buttonContainer}>
+        <Button onClick={previousPage}>Zurück</Button>
+        {task1 !== '' && task2 !== '' ? (
+          <Button onClick={nextPage}>Beenden</Button>
+        ) : (
+          <Button isActive={false}>Beenden</Button>
+        )}
+      </div>
     </div>
   )
 }

@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             <Droppable id="droppable">
               {parent === 'droppable' ? (
-                <div className={`${styles.glass} ${classes.glassFullLower}`}>
+                <div className={`${styles.glass} ${classes.glassFull}`}>
                   <Image
                     className={classes.blockFloat}
                     src={Tropen}
@@ -172,14 +172,16 @@ export default function Home() {
             </div>
           </div>
         </DndContext>
-        <Button onClick={previousPage}>Zurück</Button>
-        {waterValue === '7' &&
-        parent === 'droppable' &&
-        swimsValue === 'swims' ? (
-          <Button onClick={nextPage}>Weiter</Button>
-        ) : (
-          <Button isActive={false}>Weiter</Button>
-        )}
+        <div className={styles.buttonContainer}>
+          <Button onClick={previousPage}>Zurück</Button>
+          {correctWaterValue &&
+          parent === 'droppable' &&
+          swimsValue === 'swims' ? (
+            <Button onClick={nextPage}>Weiter</Button>
+          ) : (
+            <Button isActive={false}>Weiter</Button>
+          )}
+        </div>
       </main>
     </>
   )
