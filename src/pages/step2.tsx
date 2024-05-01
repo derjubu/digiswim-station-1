@@ -13,7 +13,7 @@ import Task from '@/components/Task/Task'
 import Pikto from '@/components/Pikto/Pikto'
 
 import Stein from '../images/stein.png'
-import Schwimmt from '../images/schwimmt.png'
+import Schwimmt from '../images/icons/schwimmt.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
@@ -73,6 +73,10 @@ export default function Home() {
           <br />
           Welche Zahl siehst du in der Tabelle?
         </Task>
+        <Task>
+          <Pikto image={Schwimmt} />
+          Trage in die Tabelle ein, ob der Würfel aus Stein schwimmt oder sinkt.
+        </Task>
         <table className={styles.table}>
           <tbody>
             <tr>
@@ -111,10 +115,16 @@ export default function Home() {
             </tr>
             <tr>
               <td className={styles.tableData}>
-                <Image src={Schwimmt} height={100} alt="Sinkt oder schwimmt" />
+                <label htmlFor="swims">Schwimmt oder sinkt</label>
               </td>
               <td className={styles.tableData}>-</td>
-              <td className={styles.tableData}>28 g</td>
+              <td className={clsx(styles.tableData, styles.tableDataActive)}>
+                <select id="swims" name="swims">
+                  <option value="swims">---</option>
+                  <option value="swims">Schwimmt</option>
+                  <option value="sinks">Sinkt</option>
+                </select>
+              </td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
             </tr>
@@ -159,12 +169,14 @@ export default function Home() {
             </div>
           </div>
         </DndContext>
-        <Button onClick={previousPage}>Zurück</Button>
-        {correctWaterValue && parent === 'droppable' ? (
-          <Button onClick={nextPage}>Weiter</Button>
-        ) : (
-          <Button isActive={false}>Weiter</Button>
-        )}
+        <div className={styles.buttonContainer}>
+          <Button onClick={previousPage}>Zurück</Button>
+          {correctWaterValue && parent === 'droppable' ? (
+            <Button onClick={nextPage}>Weiter</Button>
+          ) : (
+            <Button isActive={false}>Weiter</Button>
+          )}
+        </div>
       </main>
     </>
   )
