@@ -13,6 +13,7 @@ import Task from '@/components/Task/Task'
 import Pikto from '@/components/Pikto/Pikto'
 
 import Stein from '../images/stein.png'
+import Schwimmt from '../images/schwimmt.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
@@ -62,8 +63,10 @@ export default function Home() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe den Würfel aus Stein in das Wasser. Dann schiebe den Regler
-          neben dem Glas dahin, bis wo das Wasser steigt.
+          Ziehe jetzt den Würfel aus Stein in das Glas mit Wasser. Schiebe den
+          Regler neben dem Glas dahin, wo das Wasser steht.
+          <br />
+          Welche Zahl siehst du in der Tabelle?
         </Task>
         <table className={styles.table}>
           <tbody>
@@ -76,6 +79,14 @@ export default function Home() {
                 {' '}
                 <Image src={Stein} alt="Ein Stein" />
               </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Fichte} alt="Ein Block aus Fichte" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              </td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
@@ -83,6 +94,24 @@ export default function Home() {
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 {correctWaterValue ? waterValue : '?'}
               </td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
+            </tr>
+            <tr>
+              <td className={styles.tableData}>Gewicht</td>
+              <td className={styles.tableData}>-</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>142 g</td>
+              <td className={styles.tableData}>55 g</td>
+            </tr>
+            <tr>
+              <td className={styles.tableData}>
+                <Image src={Schwimmt} height={100} alt="Sinkt oder schwimmt" />
+              </td>
+              <td className={styles.tableData}>-</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
             </tr>
           </tbody>
         </table>

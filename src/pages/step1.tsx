@@ -21,7 +21,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const router = useRouter()
   function nextPage() {
-    router.push('/questionnaire1')
+    router.push('/step2')
   }
 
   const [waterValue, setWaterValue] = useState('0')
@@ -113,6 +113,11 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.glass}></div>
+          <div className={styles.draggableContainer}>
+            <Image src={Stein} alt="Ein Stein" />
+            <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
+            <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
+          </div>
         </div>
         {correctWaterValue ? (
           <Button onClick={nextPage}>Weiter</Button>
