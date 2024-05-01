@@ -3,7 +3,7 @@ import classes from './Task.module.css'
 import clsx from 'clsx'
 
 type ButtonProps = {
-  isHint: boolean
+  isHint?: boolean
   children: ReactNode
 }
 export default function Task({
