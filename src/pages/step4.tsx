@@ -24,6 +24,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const router = useRouter()
+
+  function previousPage() {
+    router.push('/step3')
+  }
+
   function nextPage() {
     router.push('/result')
   }
@@ -146,6 +151,7 @@ export default function Home() {
             </div>
           </div>
         </DndContext>
+        <Button onClick={previousPage}>Zurück</Button>
         {waterValue === '7' && parent === 'droppable' ? (
           <Button onClick={nextPage}>Weiter</Button>
         ) : (

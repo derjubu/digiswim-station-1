@@ -25,6 +25,10 @@ export default function Result(): JSX.Element {
   const [task1, setTask1] = useState<string>('')
   const [task2, setTask2] = useState<string>('')
 
+  function previousPage() {
+    router.push('/step4')
+  }
+
   function nextPage() {
     router.push('/')
   }
@@ -83,6 +87,7 @@ export default function Result(): JSX.Element {
           onChange={(event) => setTask2(event.target.value)}
         />
       </Label>
+      <Button onClick={previousPage}>Zurück</Button>
       {task1 !== '' && task2 !== '' ? (
         <Button onClick={nextPage}>Beenden</Button>
       ) : (
