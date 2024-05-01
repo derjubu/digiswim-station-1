@@ -34,6 +34,7 @@ export default function Alias(): JSX.Element {
             id="alias"
             value={alias}
             type="text"
+            className={classes.input}
             onChange={(event) => setAlias(event.target.value)}
           />
         </Label>
@@ -43,6 +44,7 @@ export default function Alias(): JSX.Element {
             id="age"
             value={age}
             type="number"
+            className={classes.input}
             onChange={(event) => setAge(event.target.value)}
           />
         </Label>
@@ -75,7 +77,7 @@ export default function Alias(): JSX.Element {
             4. Klasse
           </label>
         </Label>
-        Bist du ein Mädchen oder ein Junge
+        Bist du ein Mädchen oder ein Junge?
         <Label htmlFor="Gender">
           <input
             type="radio"

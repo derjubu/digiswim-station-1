@@ -1,13 +1,19 @@
 .description {
   color: #000;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
   text-align: left;
-  border: none;
+  border: 2px solid blue;
   border-radius: 0.4em;
   display: flex;
-  justify-content: flex-start;
+  padding: 20px;
   align-items: center;
   gap: 20px;
   width: 100%;
+  background-color: rgba(57, 136, 255, 0.587);
+  margin-bottom: 20px;
+}
+
+.isHint {
+  border: 2px solid rgb(255, 115, 0);
+  background-color: rgba(254, 153, 70, 0.866);
 }

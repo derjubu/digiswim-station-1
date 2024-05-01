@@ -16,7 +16,7 @@ export default function Intro(): JSX.Element {
 
   return (
     <div className={classes.main}>
-      <h1>Digitales Experiemt zum Thema</h1>
+      <h1>Digitales Experiment zum Thema</h1>
       <div className={styles.imageContainer}>
         <Image
           className={styles.titleImage}

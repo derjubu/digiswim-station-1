@@ -3,9 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import { DndContext, TouchSensor, useSensor, useSensors } from '@dnd-kit/core'
-import { Draggable } from '@/hooks/Draggable'
-import { Droppable } from '@/hooks/Droppable'
 import { useState } from 'react'
 
 import Task from '@/components/Task/Task'
@@ -17,6 +14,7 @@ import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
 import Button from '@/components/Button/Button'
 import { useRouter } from 'next/router'
+import clsx from 'clsx'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +25,7 @@ export default function Home() {
   }
 
   const [waterValue, setWaterValue] = useState('0')
+  const correctWaterValue = waterValue === '6'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
 
@@ -40,34 +39,60 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.headline}>
-          <h1>Digiswim Station 1</h1>
+          <h1>Digiswim Aufgabe 1</h1>
         </div>
         <Task>
-          <Pikto image={Finger} />
-          Schiebe den Regler neben dem Glas dahin, wo das Wasser steht.
+          Unten siehst du ein Glas gefüllt mit Wasser und drei Würfel aus
+          unterschiedlichem Material. Ein Würfel ist aus Stein, die anderen
+          beiden aus Fichtenholz oder Tropenholz. Diese wiegen unterschiedlich.
+          Das Gewicht kannst du in der Tabelle ablesen
         </Task>
         <table className={styles.table}>
           <tbody>
             <tr>
-              <td className={styles.tableData}>Leer</td>
-              <td className={styles.tableData}>Stein</td>
-              <td className={styles.tableData}>Fichte</td>
-              <td className={styles.tableData}>Tropenholz</td>
+              <td className={styles.tableData}>Material</td>
+              <td className={styles.tableData}>
+                <div className={styles.glasTable}></div>
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Stein} alt="Ein Stein" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Fichte} alt="Ein Block aus Fichte" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              </td>
             </tr>
             <tr>
+              <td className={styles.tableData}>Wasserhöhe</td>
+              <td className={clsx(styles.tableData, styles.tableDataActive)}>
+                {correctWaterValue ? waterValue : '?'}
+              </td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
-              <td className={styles.tableData}>?</td>
+            </tr>
+            <tr>
+              <td className={styles.tableData}>Gewicht</td>
+              <td className={styles.tableData}>-</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>142 g</td>
+              <td className={styles.tableData}>55 g</td>
             </tr>
           </tbody>
         </table>
+        <Task>
+          <Pikto image={Finger} />
+          Bevor du die Würfel in das Glas mit Wasser ziehst, schiebe den Regler
+          neben dem Glas dahin, wo das Wasser steht. Es erscheint eine Zahl
+          zwischen 1 und 10 in der Tabelle. Welche Zahl siehts du? So hoch steht
+          das Wasser in dem Glas.
+        </Task>
 
-        <div className={styles.draggableContainer}>
-          <Image src={Stein} alt="Ein Blok aus Stein" />
-          <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
-          <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
-        </div>
         <div className={styles.experimentContainer}>
           <div className={styles.sliderContainer}>
             <input
@@ -88,8 +113,13 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.glass}></div>
+          <div className={styles.draggableContainer}>
+            <Image src={Stein} alt="Ein Stein" />
+            <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
+            <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
+          </div>
         </div>
-        {waterValue === '6' ? (
+        {correctWaterValue ? (
           <Button onClick={nextPage}>Weiter</Button>
         ) : (
           <Button isActive={false}>Weiter</Button>
