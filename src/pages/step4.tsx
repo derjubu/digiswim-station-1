@@ -30,7 +30,7 @@ export default function Home() {
 
   const [parent, setParent] = useState(null)
   const [waterValue, setWaterValue] = useState('6')
-  const correctWaterValue = waterValue === '7'
+  const correctWaterValue = waterValue === '8'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
   const touchSensor = useSensor(TouchSensor)
@@ -93,6 +93,13 @@ export default function Home() {
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 {correctWaterValue ? waterValue : '?'}
               </td>
+            </tr>
+            <tr>
+              <td className={styles.tableData}>Gewicht</td>
+              <td className={styles.tableData}>-</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>142 g</td>
+              <td className={styles.tableData}>55 g</td>
             </tr>
           </tbody>
         </table>

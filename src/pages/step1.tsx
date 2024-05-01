@@ -21,7 +21,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const router = useRouter()
   function nextPage() {
-    router.push('/step2')
+    router.push('/questionnaire1')
   }
 
   const [waterValue, setWaterValue] = useState('0')
@@ -42,8 +42,10 @@ export default function Home() {
           <h1>Digiswim Aufgabe 1</h1>
         </div>
         <Task>
-          <Pikto image={Finger} />
-          Schiebe den Regler neben dem Glas dahin, wo das Wasser steht.
+          Unten siehst du ein Glas gefüllt mit Wasser und drei Würfel aus
+          unterschiedlichem Material. Ein Würfel ist aus Stein, die anderen
+          beiden aus Fichtenholz oder Tropenholz. Diese wiegen unterschiedlich.
+          Das Gewicht kannst du in der Tabelle ablesen
         </Task>
         <table className={styles.table}>
           <tbody>
@@ -52,15 +54,44 @@ export default function Home() {
               <td className={styles.tableData}>
                 <div className={styles.glasTable}></div>
               </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Stein} alt="Ein Stein" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Fichte} alt="Ein Block aus Fichte" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              </td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 {correctWaterValue ? waterValue : '?'}
               </td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
+            </tr>
+            <tr>
+              <td className={styles.tableData}>Gewicht</td>
+              <td className={styles.tableData}>-</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>142 g</td>
+              <td className={styles.tableData}>55 g</td>
             </tr>
           </tbody>
         </table>
+        <Task>
+          <Pikto image={Finger} />
+          Bevor du die Würfel in das Glas mit Wasser ziehst, schiebe den Regler
+          neben dem Glas dahin, wo das Wasser steht. Es erscheint eine Zahl
+          zwischen 1 und 10 in der Tabelle. Welche Zahl siehts du? So hoch steht
+          das Wasser in dem Glas.
+        </Task>
 
         <div className={styles.experimentContainer}>
           <div className={styles.sliderContainer}>

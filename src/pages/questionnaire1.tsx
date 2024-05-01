@@ -25,8 +25,12 @@ export default function Result(): JSX.Element {
   const [task1, setTask1] = useState<string>('')
   const [task2, setTask2] = useState<string>('')
 
+  function previousPage() {
+    router.push('/step1')
+  }
+
   function nextPage() {
-    router.push('/')
+    router.push('/step2')
   }
 
   return (
@@ -57,7 +61,7 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>6</td>
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
-            <td className={styles.tableData}>8</td>
+            <td className={styles.tableData}>7</td>
           </tr>
         </tbody>
       </table>
@@ -83,10 +87,11 @@ export default function Result(): JSX.Element {
           onChange={(event) => setTask2(event.target.value)}
         />
       </Label>
+      <Button onClick={previousPage}>Zurück</Button>
       {task1 !== '' && task2 !== '' ? (
-        <Button onClick={nextPage}>Beenden</Button>
+        <Button onClick={nextPage}>Weiter</Button>
       ) : (
-        <Button isActive={false}>Beenden</Button>
+        <Button isActive={false}>Weiter</Button>
       )}
     </div>
   )

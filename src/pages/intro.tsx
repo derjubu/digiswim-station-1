@@ -26,14 +26,12 @@ export default function Alias(): JSX.Element {
   return (
     <div className={classes.main}>
       <h1>Hallo {aliasName}, lass uns starten!</h1>
-      <Task>
-        Bearbeite die folgenden Aufgaben und ziehe die verschiedenen Elemente in
-        das Gefäß!
-      </Task>
+      <Task>Bearbeite die folgenden Aufgaben.</Task>
 
       <Task>
-        <Pikto image={Lupe} /> Beobachte, was passiert, und notiere am Ende dein
-        Ergebnis.
+        <Pikto image={Lupe} />
+        Beobachte, was passiert. Am Ende sollst du überlegen, warum du zu deinem
+        Ergebnis gekommen bist.
       </Task>
       <Image src={Boot} alt="Ein Boot" className={styles.image} />
       <Button onClick={nextPage}>Los geht&apos;s</Button>
