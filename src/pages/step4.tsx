@@ -16,6 +16,7 @@ import Stein from '../images/stein.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
+import Schwimmt from '../images/icons/schwimmt.png'
 import Button from '@/components/Button/Button'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
@@ -68,8 +69,15 @@ export default function Home() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe den Würfel aus Tropenholz in das Wasser. Dann schiebe den Regler
-          neben dem Glas dahin, bis wo das Wasser steigt.
+          Ziehe jetzt den Würfel aus Tropenholz in das Glas mit Wasser. Schiebe
+          den Regler neben dem Glas dahin, wo das Wasser steht.
+          <br />
+          Welche Zahl siehst du in der Tabelle?
+        </Task>
+        <Task>
+          <Pikto image={Schwimmt} />
+          Trage in die Tabelle ein, ob der Würfel aus Tropenholz schwimmt oder
+          sinkt.
         </Task>
         <table className={styles.table}>
           <tbody>
