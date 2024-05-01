@@ -11,3 +11,8 @@
   width: 100%;
   background-color: rgba(57, 136, 255, 0.587);
 }
+
+.isHint {
+  border: 2px solid rgb(255, 115, 0);
+  background-color: rgba(254, 153, 70, 0.866);
+}
