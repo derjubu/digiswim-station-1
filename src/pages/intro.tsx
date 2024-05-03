@@ -12,7 +12,7 @@ import Lupe from '../images/icons/lupe.png'
 import Boot from '../images/boot_skaliert.png'
 import Task from '@/components/Task/Task'
 
-export default function Alias(): JSX.Element {
+export default function Intro(): JSX.Element {
   const [aliasName, setAliasName] = useState('')
 
   useEffect(() => setAliasName(window!.localStorage!.getItem('alias')!))

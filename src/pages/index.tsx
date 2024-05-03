@@ -6,7 +6,7 @@ import Button from '../components/Button/Button'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export default function Intro(): JSX.Element {
+export default function Index(): JSX.Element {
   const router = useRouter()
 
   function onCLick(event: MouseEvent) {
