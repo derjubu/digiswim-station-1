@@ -18,7 +18,7 @@ import clsx from 'clsx'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Step1() {
   const router = useRouter()
   function nextPage() {
     router.push('/step2')

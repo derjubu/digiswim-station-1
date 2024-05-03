@@ -23,7 +23,7 @@ import clsx from 'clsx'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Step3() {
   const router = useRouter()
 
   function previousPage() {

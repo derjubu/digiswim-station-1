@@ -30,7 +30,7 @@ export default function Result(): JSX.Element {
   const [task4, setTask4] = useState<string>('')
 
   function previousPage() {
-    router.push('/step4')
+    router.push('/end')
   }
 
   function nextPage() {
