@@ -30,11 +30,11 @@ export default function Result(): JSX.Element {
   const [task4, setTask4] = useState<string>('')
 
   function previousPage() {
-    router.push('/end')
+    router.push('/step4')
   }
 
   function nextPage() {
-    router.push('/')
+    router.push('/end')
   }
 
   return (
@@ -164,7 +164,7 @@ export default function Result(): JSX.Element {
       </Label>
       <div className={styles.buttonContainer}>
         <Button onClick={previousPage}>Zurück</Button>
-        {task1 !== '' && task2 !== '' && task3 !== '' && task4 !== 'size' ? (
+        {task1 !== '' && task2 !== '' && task3 !== '' && task4 === 'size' ? (
           <Button onClick={nextPage}>Beenden</Button>
         ) : (
           <Button isActive={false}>Beenden</Button>
