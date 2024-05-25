@@ -162,7 +162,7 @@ export default function Step4() {
             </div>
             <Droppable id="droppable">
               {parent === 'droppable' ? (
-                <div className={`${styles.glass} ${classes.glassFull}`}>
+                <div className={`${styles.glass} ${classes.glassFullLower}`}>
                   <Image
                     className={classes.blockFloat}
                     src={Tropen}
