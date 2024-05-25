@@ -39,13 +39,14 @@ export default function Step1() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.headline}>
-          <h1>Digiswim Aufgabe 1</h1>
+          <h1>DigiSwim Aufgabe 1</h1>
         </div>
         <Task>
           Unten siehst du ein Glas gefüllt mit Wasser und drei Würfel aus
           unterschiedlichem Material. Ein Würfel ist aus Stein, die anderen
-          beiden aus Fichtenholz oder Tropenholz. Diese wiegen unterschiedlich.
-          Das Gewicht kannst du in der Tabelle ablesen
+          beiden aus Fichtenholz oder Tropenholz. Diese sind gleich groß, sind
+          aber unterschiedlich schwer. Das Gewicht kannst du in der Tabelle
+          ablesen
         </Task>
         <table className={styles.table}>
           <tbody>

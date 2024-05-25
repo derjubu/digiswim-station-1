@@ -120,7 +120,7 @@ export default function Step3() {
                 <label htmlFor="swims">Schwimmt oder sinkt</label>
               </td>
               <td className={styles.tableData}>-</td>
-              <td className={styles.tableData}>Sinkt</td>
+              <td className={styles.tableData}>sinkt</td>
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 <select
                   id="swims"
@@ -129,8 +129,8 @@ export default function Step3() {
                   onChange={(e) => setSwimsValue(e.target.value)}
                 >
                   <option value="none">---</option>
-                  <option value="swims">Schwimmt</option>
-                  <option value="sinks">Sinkt</option>
+                  <option value="swims">schwimmt</option>
+                  <option value="sinks">sinkt</option>
                 </select>
               </td>
               <td className={styles.tableData}>?</td>

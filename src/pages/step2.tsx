@@ -127,8 +127,8 @@ export default function Step2() {
                   onChange={(e) => setSwimsValue(e.target.value)}
                 >
                   <option value="none">---</option>
-                  <option value="swims">Schwimmt</option>
-                  <option value="sinks">Sinkt</option>
+                  <option value="swims">schwimmt</option>
+                  <option value="sinks">sinkt</option>
                 </select>
               </td>
               <td className={styles.tableData}>?</td>

@@ -37,7 +37,7 @@ export default function Step4() {
   const [parent, setParent] = useState(null)
   const [swimsValue, setSwimsValue] = useState('none')
   const [waterValue, setWaterValue] = useState('6')
-  const correctWaterValue = waterValue === '8'
+  const correctWaterValue = waterValue === '7'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
   const touchSensor = useSensor(TouchSensor)
@@ -120,8 +120,8 @@ export default function Step4() {
                 <label htmlFor="swims">Schwimmt oder sinkt</label>
               </td>
               <td className={styles.tableData}>-</td>
-              <td className={styles.tableData}>Sinkt</td>
-              <td className={styles.tableData}>Sinkt</td>
+              <td className={styles.tableData}>sinkt</td>
+              <td className={styles.tableData}>sinkt</td>
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 <select
                   id="swims"
@@ -130,8 +130,8 @@ export default function Step4() {
                   onChange={(e) => setSwimsValue(e.target.value)}
                 >
                   <option value="none">---</option>
-                  <option value="swims">Schwimmt</option>
-                  <option value="sinks">Sinkt</option>
+                  <option value="swims">schwimmt</option>
+                  <option value="sinks">sinkt</option>
                 </select>
               </td>
             </tr>

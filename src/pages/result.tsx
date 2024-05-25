@@ -79,9 +79,9 @@ export default function Result(): JSX.Element {
               <label htmlFor="swims">Schwimmt oder sinkt</label>
             </td>
             <td className={styles.tableData}>-</td>
-            <td className={styles.tableData}>Sinkt</td>
-            <td className={styles.tableData}>Sinkt</td>
-            <td className={styles.tableData}>Schwimmt</td>
+            <td className={styles.tableData}>sinkt</td>
+            <td className={styles.tableData}>sinkt</td>
+            <td className={styles.tableData}>schwimmt</td>
           </tr>
         </tbody>
       </table>
