@@ -13,6 +13,21 @@
   padding-top: 20px;
 }
 
+.paragraph {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.listElem {
+  margin-bottom: 28px;
+  margin-left: 20px;
+}
+
+.listElem::marker {
+  font-size: 20px;
+}
+
 .input {
   height: 44px;
   padding-left: 10px;

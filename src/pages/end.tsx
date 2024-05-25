@@ -15,8 +15,9 @@ export default function End(): JSX.Element {
 
   return (
     <div className={classes.main}>
-      <h1>Danke, dass du die Experimente durchgeführt hast</h1>
+      <h1>Super, du hast es geschafft!</h1>
       <Task>
+        Danke, dass du die Experimente durchgeführt hast <br /> <br />
         Drücke auf den Knopf unten, um wieder zurück zum Anfang zu kommen.
       </Task>
       <Button onClick={nextPage}>Zum Anfang</Button>
