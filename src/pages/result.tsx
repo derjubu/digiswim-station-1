@@ -125,7 +125,7 @@ export default function Result(): JSX.Element {
       <Label htmlFor="task3">
         <Task>Stimmt das?</Task>
         <ol>
-          <li>
+          <li className={styles.listElem}>
             <p className={styles.paragraph}>
               Gegenstände gleicher Größe verdrängen alle gleich viel Wasser,
               egal wie schwer sie sind
@@ -157,7 +157,7 @@ export default function Result(): JSX.Element {
               Nein
             </label>
           </li>
-          <li>
+          <li className={styles.listElem}>
             <p className={styles.paragraph}>
               Gegenstände, die schwimmen verdrängen auch Wasser
             </p>
@@ -188,7 +188,7 @@ export default function Result(): JSX.Element {
               Nein
             </label>
           </li>
-          <li>
+          <li className={styles.listElem}>
             <p className={styles.paragraph}>
               Wieviel Wasser verdrängt wird, hängt vom Gewicht ab.
             </p>
@@ -219,7 +219,7 @@ export default function Result(): JSX.Element {
               Nein
             </label>
           </li>
-          <li>
+          <li className={styles.listElem}>
             <p className={styles.paragraph}>
               Wieviel Wasser verdrängt wird, hängt vom Platz (Volumen) ab, den
               ein Gegenstand einnimmt.
