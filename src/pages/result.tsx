@@ -190,7 +190,7 @@ export default function Result(): JSX.Element {
           </li>
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
-              Wieviel Wasser verdrängt wird, hängt vom Gewicht ab.
+              Wie viel Wasser verdrängt wird, hängt vom Gewicht ab.
             </p>
             <input
               type="radio"
@@ -221,7 +221,7 @@ export default function Result(): JSX.Element {
           </li>
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
-              Wieviel Wasser verdrängt wird, hängt vom Platz (Volumen) ab, den
+              Wie viel Wasser verdrängt wird, hängt vom Platz (Volumen) ab, den
               ein Gegenstand einnimmt.
             </p>
             <input
