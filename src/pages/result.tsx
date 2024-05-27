@@ -15,6 +15,7 @@ import TextArea from '@/components/TextArea/TextArea'
 import Button from '@/components/Button/Button'
 
 import Stein from '../images/stein.png'
+import Glas from '../images/glas.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Task from '@/components/Task/Task'
@@ -53,7 +54,8 @@ export default function Result(): JSX.Element {
           <tr>
             <td className={styles.tableData}>Material</td>
             <td className={styles.tableData}>
-              <div className={styles.glasTable}></div>
+              {' '}
+              <Image src={Glas} alt="Ein Glas" />
             </td>
             <td className={styles.tableData}>
               {' '}

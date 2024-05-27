@@ -13,6 +13,7 @@ import Task from '@/components/Task/Task'
 import Pikto from '@/components/Pikto/Pikto'
 
 import Stein from '../images/stein.png'
+import Glas from '../images/glas.png'
 import Schwimmt from '../images/icons/schwimmt.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
@@ -83,7 +84,8 @@ export default function Step2() {
             <tr>
               <td className={styles.tableData}>Material</td>
               <td className={styles.tableData}>
-                <div className={styles.glasTable}></div>
+                {' '}
+                <Image src={Glas} alt="Ein Glas" />
               </td>
               <td className={styles.tableData}>
                 {' '}
