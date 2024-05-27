@@ -137,7 +137,7 @@ export default function Step4() {
             </tr>
           </tbody>
         </table>
-        <DndContext onDragOver={handleDragEnd} sensors={sensors}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           <div className={styles.experimentContainer}>
             <div className={styles.sliderContainer}>
               <input
