@@ -67,10 +67,20 @@ export default function Result(): JSX.Element {
               {' '}
               <Image src={Tropen} alt="Ein Block aus Tropenholz" />
             </td>
+            <td className={styles.tableData}>
+              {' '}
+              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+            </td>
+            <td className={styles.tableData}>
+              {' '}
+              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+            </td>
           </tr>
           <tr>
             <td className={styles.tableData}>Wasserhöhe</td>
             <td className={styles.tableData}>6</td>
+            <td className={styles.tableData}>8</td>
+            <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
@@ -81,6 +91,8 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>142 g</td>
             <td className={styles.tableData}>55 g</td>
             <td className={styles.tableData}>28 g</td>
+            <td className={styles.tableData}>28 g</td>
+            <td className={styles.tableData}>28 g</td>
           </tr>
           <tr>
             <td className={styles.tableData}>
@@ -89,6 +101,8 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>-</td>
             <td className={styles.tableData}>sinkt</td>
             <td className={styles.tableData}>sinkt</td>
+            <td className={styles.tableData}>schwimmt</td>
+            <td className={styles.tableData}>schwimmt</td>
             <td className={styles.tableData}>schwimmt</td>
           </tr>
         </tbody>
