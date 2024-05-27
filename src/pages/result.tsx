@@ -15,6 +15,7 @@ import TextArea from '@/components/TextArea/TextArea'
 import Button from '@/components/Button/Button'
 
 import Stein from '../images/stein.png'
+import Glas from '../images/glas.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Task from '@/components/Task/Task'
@@ -53,7 +54,8 @@ export default function Result(): JSX.Element {
           <tr>
             <td className={styles.tableData}>Material</td>
             <td className={styles.tableData}>
-              <div className={styles.glasTable}></div>
+              {' '}
+              <Image src={Glas} alt="Ein Glas" />
             </td>
             <td className={styles.tableData}>
               {' '}
@@ -67,10 +69,20 @@ export default function Result(): JSX.Element {
               {' '}
               <Image src={Tropen} alt="Ein Block aus Tropenholz" />
             </td>
+            <td className={styles.tableData}>
+              {' '}
+              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+            </td>
+            <td className={styles.tableData}>
+              {' '}
+              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+            </td>
           </tr>
           <tr>
             <td className={styles.tableData}>Wasserhöhe</td>
             <td className={styles.tableData}>6</td>
+            <td className={styles.tableData}>8</td>
+            <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
@@ -81,6 +93,8 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>142 g</td>
             <td className={styles.tableData}>55 g</td>
             <td className={styles.tableData}>28 g</td>
+            <td className={styles.tableData}>28 g</td>
+            <td className={styles.tableData}>28 g</td>
           </tr>
           <tr>
             <td className={styles.tableData}>
@@ -89,6 +103,8 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>-</td>
             <td className={styles.tableData}>sinkt</td>
             <td className={styles.tableData}>sinkt</td>
+            <td className={styles.tableData}>schwimmt</td>
+            <td className={styles.tableData}>schwimmt</td>
             <td className={styles.tableData}>schwimmt</td>
           </tr>
         </tbody>
@@ -128,7 +144,7 @@ export default function Result(): JSX.Element {
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
               Gegenstände gleicher Größe verdrängen alle gleich viel Wasser,
-              egal wie schwer sie sind
+              egal wie schwer sie sind.
             </p>
             <input
               type="radio"
@@ -159,7 +175,7 @@ export default function Result(): JSX.Element {
           </li>
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
-              Gegenstände, die schwimmen verdrängen auch Wasser
+              Gegenstände, die schwimmen verdrängen auch Wasser.
             </p>
             <input
               type="radio"
@@ -190,7 +206,7 @@ export default function Result(): JSX.Element {
           </li>
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
-              Wieviel Wasser verdrängt wird, hängt vom Gewicht ab.
+              Wie viel Wasser verdrängt wird, hängt vom Gewicht ab.
             </p>
             <input
               type="radio"
@@ -221,7 +237,7 @@ export default function Result(): JSX.Element {
           </li>
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
-              Wieviel Wasser verdrängt wird, hängt vom Platz (Volumen) ab, den
+              Wie viel Wasser verdrängt wird, hängt vom Platz (Volumen) ab, den
               ein Gegenstand einnimmt.
             </p>
             <input

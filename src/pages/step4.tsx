@@ -13,6 +13,7 @@ import Task from '@/components/Task/Task'
 import Pikto from '@/components/Pikto/Pikto'
 
 import Stein from '../images/stein.png'
+import Glas from '../images/glas.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
 import Finger from '../images/icons/finger.png'
@@ -84,7 +85,8 @@ export default function Step4() {
             <tr>
               <td className={styles.tableData}>Material</td>
               <td className={styles.tableData}>
-                <div className={styles.glasTable}></div>
+                {' '}
+                <Image src={Glas} alt="Ein Glas" />
               </td>
               <td className={styles.tableData}>
                 {' '}
@@ -117,7 +119,7 @@ export default function Step4() {
             </tr>
             <tr>
               <td className={styles.tableData}>
-                <label htmlFor="swims">Schwimmt oder sinkt</label>
+                <label htmlFor="swims">schwimmt oder sinkt</label>
               </td>
               <td className={styles.tableData}>-</td>
               <td className={styles.tableData}>sinkt</td>
@@ -137,7 +139,7 @@ export default function Step4() {
             </tr>
           </tbody>
         </table>
-        <DndContext onDragOver={handleDragEnd} sensors={sensors}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           <div className={styles.experimentContainer}>
             <div className={styles.sliderContainer}>
               <input
