@@ -116,7 +116,7 @@ export default function Step2() {
             </tr>
             <tr>
               <td className={styles.tableData}>
-                <label htmlFor="swims">Schwimmt oder sinkt</label>
+                <label htmlFor="swims">schwimmt oder sinkt</label>
               </td>
               <td className={styles.tableData}>-</td>
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
