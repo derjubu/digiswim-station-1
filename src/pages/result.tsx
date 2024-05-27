@@ -128,7 +128,7 @@ export default function Result(): JSX.Element {
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
               Gegenstände gleicher Größe verdrängen alle gleich viel Wasser,
-              egal wie schwer sie sind
+              egal wie schwer sie sind.
             </p>
             <input
               type="radio"
@@ -159,7 +159,7 @@ export default function Result(): JSX.Element {
           </li>
           <li className={styles.listElem}>
             <p className={styles.paragraph}>
-              Gegenstände, die schwimmen verdrängen auch Wasser
+              Gegenstände, die schwimmen verdrängen auch Wasser.
             </p>
             <input
               type="radio"

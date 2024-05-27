@@ -46,7 +46,7 @@ export default function Step1() {
           unterschiedlichem Material. Ein Würfel ist aus Stein, die anderen
           beiden aus Fichtenholz oder Tropenholz. Diese sind gleich groß, sind
           aber unterschiedlich schwer. Das Gewicht kannst du in der Tabelle
-          ablesen
+          ablesen.
         </Task>
         <table className={styles.table}>
           <tbody>
