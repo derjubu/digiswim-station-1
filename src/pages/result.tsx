@@ -18,6 +18,8 @@ import Stein from '../images/stein.png'
 import Glas from '../images/glas.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
+import Metall from '../images/metall.png'
+import Schiff from '../images/schiff.png'
 import Task from '@/components/Task/Task'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -68,14 +70,12 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>
               {' '}
               <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+            </td>{' '}
+            <td className={styles.tableData}>
+              <Image src={Metall} alt="Ein Block aus Metall" />
             </td>
             <td className={styles.tableData}>
-              {' '}
-              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
-            </td>
-            <td className={styles.tableData}>
-              {' '}
-              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              <Image src={Schiff} alt="Ein Schiff aus Metall" />
             </td>
           </tr>
           <tr>
@@ -83,9 +83,9 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>6</td>
             <td className={styles.tableData}>8</td>
             <td className={styles.tableData}>8</td>
+            <td className={styles.tableData}>7</td>
             <td className={styles.tableData}>8</td>
-            <td className={styles.tableData}>8</td>
-            <td className={styles.tableData}>8</td>
+            <td className={styles.tableData}>7</td>
           </tr>
           <tr>
             <td className={styles.tableData}>Gewicht</td>
@@ -98,13 +98,13 @@ export default function Result(): JSX.Element {
           </tr>
           <tr>
             <td className={styles.tableData}>
-              <label htmlFor="swims">Schwimmt oder sinkt</label>
+              <label htmlFor="swims">schwimmt oder sinkt</label>
             </td>
             <td className={styles.tableData}>-</td>
             <td className={styles.tableData}>sinkt</td>
             <td className={styles.tableData}>sinkt</td>
             <td className={styles.tableData}>schwimmt</td>
-            <td className={styles.tableData}>schwimmt</td>
+            <td className={styles.tableData}>sinkt</td>
             <td className={styles.tableData}>schwimmt</td>
           </tr>
         </tbody>
