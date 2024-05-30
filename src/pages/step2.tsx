@@ -17,6 +17,8 @@ import Glas from '../images/glas.png'
 import Schwimmt from '../images/icons/schwimmt.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
+import Metall from '../images/metall.png'
+import Schiff from '../images/schiff.png'
 import Finger from '../images/icons/finger.png'
 import Button from '@/components/Button/Button'
 import { useRouter } from 'next/router'
@@ -99,6 +101,14 @@ export default function Step2() {
                 {' '}
                 <Image src={Tropen} alt="Ein Block aus Tropenholz" />
               </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Metall} alt="Ein Block aus Metall" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Schiff} alt="Ein Schiff aus Metall" />
+              </td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
@@ -108,12 +118,16 @@ export default function Step2() {
               </td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
             </tr>
             <tr>
               <td className={styles.tableData}>Gewicht</td>
               <td className={styles.tableData}>-</td>
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>28 g</td>
               <td className={styles.tableData}>28 g</td>
             </tr>
             <tr>
@@ -133,6 +147,8 @@ export default function Step2() {
                   <option value="sinks">sinkt</option>
                 </select>
               </td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
               <td className={styles.tableData}>?</td>
             </tr>
@@ -172,8 +188,10 @@ export default function Step2() {
             </Droppable>
             <div className={styles.draggableContainer}>
               {!parent ? draggable : <div className={styles.emptyBlock}></div>}
-              <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
-              <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
+              <Image src={Fichte} alt="Ein Block aus Fichtenholz" />
+              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              <Image src={Metall} alt="Ein Block aus Metall" />
+              <Image src={Schiff} alt="Ein Schiff aus Metall" />
             </div>
           </div>
         </DndContext>

@@ -16,6 +16,8 @@ import Stein from '../images/stein.png'
 import Glas from '../images/glas.png'
 import Fichte from '../images/fichte.png'
 import Tropen from '../images/tropen.png'
+import Metall from '../images/metall.png'
+import Schiff from '../images/schiff.png'
 import Finger from '../images/icons/finger.png'
 import Schwimmt from '../images/icons/schwimmt.png'
 import Button from '@/components/Button/Button'
@@ -32,7 +34,7 @@ export default function Step4() {
   }
 
   function nextPage() {
-    router.push('/result')
+    router.push('/step5')
   }
 
   const [parent, setParent] = useState(null)
@@ -100,6 +102,14 @@ export default function Step4() {
                 {' '}
                 <Image src={Tropen} alt="Ein Block aus Tropenholz" />
               </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Metall} alt="Ein Block aus Metall" />
+              </td>
+              <td className={styles.tableData}>
+                {' '}
+                <Image src={Schiff} alt="Ein Schiff aus Metall" />
+              </td>
             </tr>
             <tr>
               <td className={styles.tableData}>Wasserhöhe</td>
@@ -109,12 +119,16 @@ export default function Step4() {
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 {correctWaterValue ? waterValue : '?'}
               </td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
             </tr>
             <tr>
               <td className={styles.tableData}>Gewicht</td>
               <td className={styles.tableData}>-</td>
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
+              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>28 g</td>
               <td className={styles.tableData}>28 g</td>
             </tr>
             <tr>
@@ -136,6 +150,8 @@ export default function Step4() {
                   <option value="sinks">sinkt</option>
                 </select>
               </td>
+              <td className={styles.tableData}>?</td>
+              <td className={styles.tableData}>?</td>
             </tr>
           </tbody>
         </table>
@@ -179,6 +195,8 @@ export default function Step4() {
               <Image src={Stein} alt="Ein Stein" />
               <Image src={Fichte} alt="Ein Block aus Fichtenholz" />
               {!parent ? draggable : <div className={styles.emptyBlock}></div>}
+              <Image src={Metall} alt="Ein Block aus Metall" />
+              <Image src={Schiff} alt="Ein Schiff aus Metall" />
             </div>
           </div>
         </DndContext>
