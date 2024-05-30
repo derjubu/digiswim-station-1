@@ -60,8 +60,11 @@
 .draggableContainer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   padding-left: 32px;
+  height: 300px;
 
   .emptyBlock {
     height: 89px;

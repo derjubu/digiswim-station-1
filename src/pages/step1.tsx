@@ -132,8 +132,10 @@ export default function Step1() {
           <div className={styles.glass}></div>
           <div className={styles.draggableContainer}>
             <Image src={Stein} alt="Ein Stein" />
-            <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
-            <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
+            <Image src={Fichte} alt="Ein Block aus Fichtenholz" />
+            <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+            <Image src={Metall} alt="Ein Block aus Metall" />
+            <Image src={Schiff} alt="Ein Schiff aus Metall" />
           </div>
         </div>
         {correctWaterValue ? (

@@ -195,6 +195,8 @@ export default function Step4() {
               <Image src={Stein} alt="Ein Stein" />
               <Image src={Fichte} alt="Ein Block aus Fichtenholz" />
               {!parent ? draggable : <div className={styles.emptyBlock}></div>}
+              <Image src={Metall} alt="Ein Block aus Metall" />
+              <Image src={Schiff} alt="Ein Schiff aus Metall" />
             </div>
           </div>
         </DndContext>

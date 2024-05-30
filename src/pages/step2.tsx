@@ -188,8 +188,10 @@ export default function Step2() {
             </Droppable>
             <div className={styles.draggableContainer}>
               {!parent ? draggable : <div className={styles.emptyBlock}></div>}
-              <Image src={Fichte} alt="Ein Blok aus Fichtenholz" />
-              <Image src={Tropen} alt="Ein Blok aus Tropenholz" />
+              <Image src={Fichte} alt="Ein Block aus Fichtenholz" />
+              <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              <Image src={Metall} alt="Ein Block aus Metall" />
+              <Image src={Schiff} alt="Ein Schiff aus Metall" />
             </div>
           </div>
         </DndContext>

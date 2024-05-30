@@ -191,6 +191,8 @@ export default function Step3() {
               <Image src={Stein} alt="Ein Stein" />
               {!parent ? draggable : <div className={styles.emptyBlock}></div>}
               <Image src={Tropen} alt="Ein Block aus Tropenholz" />
+              <Image src={Metall} alt="Ein Block aus Metall" />
+              <Image src={Schiff} alt="Ein Schiff aus Metall" />
             </div>
           </div>
         </DndContext>
