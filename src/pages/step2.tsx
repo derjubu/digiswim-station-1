@@ -127,8 +127,8 @@ export default function Step2() {
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
               <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>439 g</td>
+              <td className={styles.tableData}>439 g</td>
             </tr>
             <tr>
               <td className={styles.tableData}>

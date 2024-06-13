@@ -29,23 +29,14 @@ export default function Result(): JSX.Element {
 
   const [task1, setTask1] = useState<string>('')
   const [task2, setTask2] = useState<string>('')
-  const [task31, setTask31] = useState<string>('')
-  const [task32, setTask32] = useState<string>('')
-  const [task33, setTask33] = useState<string>('')
-  const [task34, setTask34] = useState<string>('')
-
-  const rightSolutionTask3 =
-    task31 == 'true' &&
-    task32 == 'true' &&
-    task33 == 'false' &&
-    task34 == 'true'
+  const [task3, setTask3] = useState<string>('')
 
   function previousPage() {
     router.push('/step4')
   }
 
   function nextPage() {
-    router.push('/end')
+    router.push('/result2')
   }
 
   return (
@@ -93,8 +84,8 @@ export default function Result(): JSX.Element {
             <td className={styles.tableData}>142 g</td>
             <td className={styles.tableData}>55 g</td>
             <td className={styles.tableData}>28 g</td>
-            <td className={styles.tableData}>28 g</td>
-            <td className={styles.tableData}>28 g</td>
+            <td className={styles.tableData}>439 g</td>
+            <td className={styles.tableData}>439 g</td>
           </tr>
           <tr>
             <td className={styles.tableData}>
@@ -126,8 +117,8 @@ export default function Result(): JSX.Element {
       </Label>
       <Label htmlFor="task2">
         <Task>
-          Wie kommt es, dass bei dem Würfel aus Stein und dem Würfel aus Fichte
-          das Wasser gleich hoch steigt? Woran kann das liegen? <br />
+          Warum steigt überall das Wasser?
+          <br />
           <Pikto image={Tastatur} />
           <Pikto image={Mikro} />
         </Task>
@@ -138,143 +129,28 @@ export default function Result(): JSX.Element {
           onChange={(event) => setTask2(event.target.value)}
         />
       </Label>
+
       <Label htmlFor="task3">
-        <Task>Stimmt das?</Task>
-        <ol>
-          <li className={styles.listElem}>
-            <p className={styles.paragraph}>
-              Gegenstände gleicher Größe verdrängen alle gleich viel Wasser,
-              egal wie schwer sie sind.
-            </p>
-            <input
-              type="radio"
-              id="size"
-              name="task31"
-              value="true"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask31(target.value)
-              }}
-            />
-            <label htmlFor="true" className={styles.radioLabel}>
-              Ja
-            </label>
-            <input
-              type="radio"
-              id="size"
-              name="task31"
-              value="false"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask31(target.value)
-              }}
-            />
-            <label htmlFor="false" className={styles.radioLabel}>
-              Nein
-            </label>
-          </li>
-          <li className={styles.listElem}>
-            <p className={styles.paragraph}>
-              Gegenstände, die schwimmen verdrängen auch Wasser.
-            </p>
-            <input
-              type="radio"
-              id="size"
-              name="task32"
-              value="true"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask32(target.value)
-              }}
-            />
-            <label htmlFor="true" className={styles.radioLabel}>
-              Ja
-            </label>
-            <input
-              type="radio"
-              id="size"
-              name="task32"
-              value="false"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask32(target.value)
-              }}
-            />
-            <label htmlFor="false" className={styles.radioLabel}>
-              Nein
-            </label>
-          </li>
-          <li className={styles.listElem}>
-            <p className={styles.paragraph}>
-              Wie viel Wasser verdrängt wird, hängt vom Gewicht ab.
-            </p>
-            <input
-              type="radio"
-              id="size"
-              name="task33"
-              value="true"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask33(target.value)
-              }}
-            />
-            <label htmlFor="true" className={styles.radioLabel}>
-              Ja
-            </label>
-            <input
-              type="radio"
-              id="size"
-              name="task33"
-              value="false"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask33(target.value)
-              }}
-            />
-            <label htmlFor="false" className={styles.radioLabel}>
-              Nein
-            </label>
-          </li>
-          <li className={styles.listElem}>
-            <p className={styles.paragraph}>
-              Wie viel Wasser verdrängt wird, hängt vom Platz (Volumen) ab, den
-              ein Gegenstand einnimmt.
-            </p>
-            <input
-              type="radio"
-              id="size"
-              name="task34"
-              value="true"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask34(target.value)
-              }}
-            />
-            <label htmlFor="true" className={styles.radioLabel}>
-              Ja
-            </label>
-            <input
-              type="radio"
-              id="size"
-              name="task34"
-              value="false"
-              onClick={(event) => {
-                const target = event.target as HTMLButtonElement
-                if (target) setTask34(target.value)
-              }}
-            />
-            <label htmlFor="false" className={styles.radioLabel}>
-              Nein
-            </label>
-          </li>
-        </ol>
+        <Task>
+          Warum steigt das Wasser unterschiedlich hoch?
+          <br />
+          <Pikto image={Tastatur} />
+          <Pikto image={Mikro} />
+        </Task>
+        <TextArea
+          id="task3"
+          name="station1-aufgabe1"
+          value={task3}
+          onChange={(event) => setTask3(event.target.value)}
+        />
       </Label>
+
       <div className={styles.buttonContainer}>
         <Button onClick={previousPage}>Zurück</Button>
-        {task1 !== '' && task2 !== '' && rightSolutionTask3 ? (
-          <Button onClick={nextPage}>Beenden</Button>
+        {task1 !== '' && task2 !== '' && task2 !== '' ? (
+          <Button onClick={nextPage}>Weiter</Button>
         ) : (
-          <Button isActive={false}>Beenden</Button>
+          <Button isActive={false}>Weiter</Button>
         )}
       </div>
     </main>

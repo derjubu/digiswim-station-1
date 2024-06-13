@@ -22,7 +22,7 @@ export default function End(): JSX.Element {
     <div className={classes.main}>
       <h1>Super, du hast es geschafft!</h1>
       <Task>
-        Danke, dass du die Experimente durchgeführt hast <br /> <br />
+        Danke, dass du die Experimente durchgeführt hast. <br /> <br />
         Drücke auf den Knopf unten, um wieder zurück zum Anfang zu kommen.
       </Task>
       <Image src={Boot} alt="Ein Boot" className={styles.image} />

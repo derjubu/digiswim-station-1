@@ -40,7 +40,7 @@ export default function Step5() {
   const [parent, setParent] = useState(null)
   const [swimsValue, setSwimsValue] = useState('none')
   const [waterValue, setWaterValue] = useState('6')
-  const correctWaterValue = waterValue === '8'
+  const correctWaterValue = waterValue === '7'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
   const touchSensor = useSensor(TouchSensor)
@@ -72,15 +72,14 @@ export default function Step5() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe jetzt den Würfel aus Metall in das Glas mit Wasser. Schiebe den
+          Ziehe jetzt den Klotz aus Metall in das Glas mit Wasser. Schiebe den
           Regler neben dem Glas dahin, wo das Wasser steht.
           <br />
           Welche Zahl siehst du in der Tabelle?
         </Task>
         <Task>
           <Pikto image={Schwimmt} />
-          Trage in die Tabelle ein, ob der Würfel aus Metall schwimmt oder
-          sinkt.
+          Trage in die Tabelle ein, ob der Klotz aus Metall schwimmt oder sinkt.
         </Task>
         <table className={styles.table}>
           <tbody>
@@ -129,8 +128,8 @@ export default function Step5() {
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
               <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>439 g</td>
+              <td className={styles.tableData}>439 g</td>
             </tr>
             <tr>
               <td className={styles.tableData}>
@@ -181,7 +180,7 @@ export default function Step5() {
             </div>
             <Droppable id="droppable">
               {parent === 'droppable' ? (
-                <div className={`${styles.glass} ${classes.glassFull}`}>
+                <div className={`${styles.glass} ${classes.glassFullLower}`}>
                   <Image src={Metall} alt="Ein Block aus Metall" />
                 </div>
               ) : (
