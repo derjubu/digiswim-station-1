@@ -72,10 +72,13 @@ export default function Step3() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe jetzt den Würfel aus Fichtenholz in das Glas mit Wasser. Schiebe
-          den Regler neben dem Glas dahin, wo das Wasser steht.
-          <br />
-          Welche Zahl siehst du in der Tabelle?
+          <span>
+            Ziehe jetzt den <strong>Würfel aus Fichtenholz</strong> in das Glas
+            mit Wasser. Schiebe den Regler neben dem Glas dahin, wo das Wasser
+            steht.
+            <br />
+            Welche Zahl siehst du in der Tabelle?
+          </span>
         </Task>
         <Task>
           <Pikto image={Schwimmt} />

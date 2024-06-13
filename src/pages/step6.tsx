@@ -72,10 +72,13 @@ export default function Step6() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe jetzt das Schiff aus Metall in das Glas mit Wasser. Schiebe den
-          Regler neben dem Glas dahin, wo das Wasser steht.
-          <br />
-          Welche Zahl siehst du in der Tabelle?
+          <span>
+            Ziehe jetzt das <strong>Schiff aus Metall</strong> in das Glas mit
+            Wasser. Schiebe den Regler neben dem Glas dahin, wo das Wasser
+            steht.
+            <br />
+            Welche Zahl siehst du in der Tabelle?
+          </span>
         </Task>
         <Task>
           <Pikto image={Schwimmt} />
