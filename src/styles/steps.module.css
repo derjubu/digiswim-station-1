@@ -10,3 +10,8 @@
   align-self: center;
   margin-bottom: 100px;
 }
+
+.blockFloatHigh {
+  align-self: flex-start;
+  margin-top: 50px;
+}
