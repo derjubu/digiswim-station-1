@@ -72,10 +72,13 @@ export default function Step2() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe jetzt den Würfel aus Stein in das Glas mit Wasser. Schiebe den
-          Regler neben dem Glas dahin, wo das Wasser steht.
-          <br />
-          Welche Zahl siehst du in der Tabelle?
+          <span>
+            Ziehe jetzt den <strong>Würfel aus Stein </strong> in das Glas mit
+            Wasser. Schiebe den Regler neben dem Glas dahin, wo das Wasser
+            steht.
+            <br />
+            Welche Zahl siehst du in der Tabelle?
+          </span>
         </Task>
         <Task>
           <Pikto image={Schwimmt} />
@@ -127,8 +130,8 @@ export default function Step2() {
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
               <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>439 g</td>
+              <td className={styles.tableData}>439 g</td>
             </tr>
             <tr>
               <td className={styles.tableData}>

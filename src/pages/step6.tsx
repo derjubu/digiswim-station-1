@@ -40,7 +40,7 @@ export default function Step6() {
   const [parent, setParent] = useState(null)
   const [swimsValue, setSwimsValue] = useState('none')
   const [waterValue, setWaterValue] = useState('6')
-  const correctWaterValue = waterValue === '7'
+  const correctWaterValue = waterValue === '8'
   const bubblePosition =
     Number(waterValue) * 10 * 3 - Number(waterValue) * 2 - 150
   const touchSensor = useSensor(TouchSensor)
@@ -72,10 +72,13 @@ export default function Step6() {
         </div>
         <Task>
           <Pikto image={Finger} />
-          Ziehe jetzt das Schiff aus Metall in das Glas mit Wasser. Schiebe den
-          Regler neben dem Glas dahin, wo das Wasser steht.
-          <br />
-          Welche Zahl siehst du in der Tabelle?
+          <span>
+            Ziehe jetzt das <strong>Schiff aus Metall</strong> in das Glas mit
+            Wasser. Schiebe den Regler neben dem Glas dahin, wo das Wasser
+            steht.
+            <br />
+            Welche Zahl siehst du in der Tabelle?
+          </span>
         </Task>
         <Task>
           <Pikto image={Schwimmt} />
@@ -117,7 +120,7 @@ export default function Step6() {
               <td className={styles.tableData}>8</td>
               <td className={styles.tableData}>8</td>
               <td className={styles.tableData}>7</td>
-              <td className={styles.tableData}>8</td>
+              <td className={styles.tableData}>7</td>
               <td className={clsx(styles.tableData, styles.tableDataActive)}>
                 {correctWaterValue ? waterValue : '?'}
               </td>
@@ -128,8 +131,8 @@ export default function Step6() {
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
               <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>439 g</td>
+              <td className={styles.tableData}>439 g</td>
             </tr>
             <tr>
               <td className={styles.tableData}>
@@ -181,9 +184,9 @@ export default function Step6() {
             </div>
             <Droppable id="droppable">
               {parent === 'droppable' ? (
-                <div className={`${styles.glass} ${classes.glassFullLower}`}>
+                <div className={`${styles.glass} ${classes.glassFull}`}>
                   <Image
-                    className={classes.blockFloat}
+                    className={classes.blockFloatHigh}
                     src={Schiff}
                     alt="Ein Schiff aus Metall"
                   />

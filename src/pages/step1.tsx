@@ -45,11 +45,11 @@ export default function Step1() {
           <h1>DigiSwim Aufgabe 1</h1>
         </div>
         <Task>
-          Unten siehst du ein Glas gefüllt mit Wasser und drei Würfel aus
-          unterschiedlichem Material. Ein Würfel ist aus Stein, die anderen
-          beiden aus Fichtenholz oder Tropenholz. Diese sind gleich groß, sind
-          aber unterschiedlich schwer. Das Gewicht kannst du in der Tabelle
-          ablesen.
+          Unten siehst du ein Glas gefüllt mit Wasser. Daneben siehst du drei
+          Würfel aus unterschiedlichem Material sowie einen Klotz und ein Schiff
+          aus Metall. Die Würfel wiegen unterschiedlich, der Klotz und das
+          Schiff aus Metall wiegen gleich viel. Das Gewicht kannst du in der
+          Tabelle ablesen.
         </Task>
         <table className={styles.table}>
           <tbody>
@@ -97,17 +97,18 @@ export default function Step1() {
               <td className={styles.tableData}>142 g</td>
               <td className={styles.tableData}>55 g</td>
               <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
-              <td className={styles.tableData}>28 g</td>
+              <td className={styles.tableData}>439 g</td>
+              <td className={styles.tableData}>439 g</td>
             </tr>
           </tbody>
         </table>
         <Task>
           <Pikto image={Finger} />
-          Bevor du die Würfel in das Glas mit Wasser ziehst, schiebe den Regler
-          neben dem Glas dahin, wo das Wasser steht. Es erscheint eine Zahl
-          zwischen 1 und 10 in der Tabelle. Welche Zahl siehts du? So hoch steht
-          das Wasser in dem Glas.
+          Bevor du die fünf Gegenstände nacheinander in das Glas mit Wasser
+          ziehst, schiebe den Regler neben dem Glas dahin, wo das Wasser im
+          Moment steht. Es erscheint eine Zahl zwischen 1 und 10 in der Tabelle.
+          Welche Zahl siehts du? So hoch steht das Wasser in dem Glas zu Beginn
+          des Experiments.
         </Task>
 
         <div className={styles.experimentContainer}>
